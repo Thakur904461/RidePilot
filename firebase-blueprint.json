@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RidePilotFirestoreSchema",
+  "description": "Firestore schema for RidePilot driver automation app",
+  "collections": {
+    "users": {
+      "path": "users/{userId}",
+      "description": "Registered driver profile and account details",
+      "fields": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "city": { "type": "string" },
+        "vehicleType": { "type": "string" },
+        "vehicleRegistration": { "type": "string" },
+        "rating": { "type": "number" },
+        "deviceId": { "type": "string" },
+        "isSingleDeviceAuthorized": { "type": "boolean" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    },
+    "rides": {
+      "path": "users/{userId}/rides/{rideId}",
+      "description": "Driver accepted and evaluated ride history records",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "platformId": { "type": "string" },
+        "fare": { "type": "number" },
+        "pickupDistanceKm": { "type": "number" },
+        "tripDistanceKm": { "type": "number" },
+        "pickupLocation": { "type": "string" },
+        "dropLocation": { "type": "string" },
+        "estimatedMinutes": { "type": "integer" },
+        "vehicleCategory": { "type": "string" },
+        "timestamp": { "type": "integer" },
+        "status": { "type": "string" },
+        "decisionReason": { "type": "string" },
+        "confidence": { "type": "number" },
+        "isVerified": { "type": "boolean" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    },
+    "settings": {
+      "path": "users/{userId}/settings/{settingId}",
+      "description": "Driver automation parameters and rules",
+      "fields": {
+        "userId": { "type": "string" },
+        "automationState": { "type": "string" },
+        "activePreset": { "type": "string" },
+        "minFare": { "type": "number" },
+        "maxFare": { "type": "number" },
+        "minFarePerKm": { "type": "number" },
+        "maxPickupDistanceKm": { "type": "number" },
+        "minTripDistanceKm": { "type": "number" },
+        "maxTripDistanceKm": { "type": "number" },
+        "minConfidenceThreshold": { "type": "number" },
+        "autoAcceptEnabled": { "type": "boolean" },
+        "autoRejectEnabled": { "type": "boolean" },
+        "manualReviewMargin": { "type": "number" },
+        "locationFilterEnabled": { "type": "boolean" },
+        "voiceAnnouncementsEnabled": { "type": "boolean" },
+        "voiceLanguage": { "type": "string" },
+        "emergencyStopActive": { "type": "boolean" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    }
+  }
+}

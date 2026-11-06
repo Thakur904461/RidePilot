@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RidePilot</string>
+    <string name="accessibility_service_description">RidePilot Accessibility Service monitors incoming ride requests from supported driver partner apps (Ola, Uber, Rapido, Porter) and performs automated accept/skip actions according to your configured fare, distance, and location rules.</string>
+    <string name="floating_service_notification_title">RidePilot Automation Active</string>
+    <string name="floating_service_notification_desc">Monitoring incoming ride requests with your active rules.</string>
+    <string name="channel_automation_name">RidePilot Automation</string>
+    <string name="channel_automation_desc">Notifications for auto-accept actions, alerts, and floating widget controls.</string>
+</resources>

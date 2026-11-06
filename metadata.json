@@ -1,0 +1,6 @@
+{
+  "name": "RidePilot",
+  "description": "Smart Auto Ride Acceptor for Indian bike taxi, auto, cab & delivery drivers with automated filters, location zones, floating widget and voice announcements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
